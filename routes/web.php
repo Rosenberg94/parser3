@@ -13,10 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
+Route::get('/', function() {return view('welcome');})->name('/');
 Route::post('/sendurl', '\App\Http\Controllers\ParsingController@sendUrl')->name('send_url');
 
