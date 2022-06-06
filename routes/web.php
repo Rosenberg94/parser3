@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-
-Route::get('/', function() {return view('welcome');})->name('/');
+Route::get('/', '\App\Http\Controllers\HomeController@foo')->name('foo');
+Route::get('/sendjs', '\App\Http\Controllers\HomeController@sendJs')->name('send_js');
 Route::post('/sendurl', '\App\Http\Controllers\ParsingController@sendUrl')->name('send_url');
+
+
 
